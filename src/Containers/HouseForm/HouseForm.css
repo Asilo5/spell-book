@@ -40,6 +40,12 @@
     width: 14em;
     display: block;
     margin: auto;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+}
+
+.sorting-button:hover {
+    transform: rotate(360deg);
 }
 
 .name-banner {
