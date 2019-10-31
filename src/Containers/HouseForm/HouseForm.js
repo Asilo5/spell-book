@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HouseForm.css';
+import { getHouses } from '../../apiCalls';
 
 export class HouseForm extends Component {
     constructor() {
