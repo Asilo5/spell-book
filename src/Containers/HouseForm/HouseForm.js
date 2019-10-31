@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './HouseForm.css';
 
 export class HouseForm extends Component {
     constructor() {
@@ -14,15 +15,21 @@ export class HouseForm extends Component {
 
     render() {
       return (
-          <section>
-              <form>
-                  <input className='wizard-name'
+          <section className='form-section'>
+              <form className='house-form'>
+                  <div className='banner'>
+                    <input className='wizard-name'
                          type='text'
                          placeholder='Name Here' 
                          name='wizardName' 
                          value={this.state.wizardName} 
                          onChange={this.handleChange} />
-                  <img src='' alt='' />
+                    <img className='name-banner' src='https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png' alt='banner name image' />
+                  </div>
+                  <div>
+                    <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat image' />
+                    <h2 className='submit-text'>Enter</h2>
+                  </div>
               </form>
           </section>
       )
