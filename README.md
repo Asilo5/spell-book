@@ -16,7 +16,7 @@ To open the app on your web server run ``` $ npm start ```
 ## What was used to build Spell Book
 
 Spell Book was built using:
-  - (Harry Potter API)[https://www.potterapi.com/]
+  - [Harry Potter API](https://www.potterapi.com/)
   - React
   - Redux
   - React Router
