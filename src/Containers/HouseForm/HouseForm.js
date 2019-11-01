@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './HouseForm.css';
-import { getHouses } from '../../apiCalls';
+import { getHouses, getSpells } from '../../apiCalls';
 import { connect } from 'react-redux';
 import { givenHouse, isLoading, wizardsName } from '../../actions';
 import { Link } from 'react-router-dom';
@@ -26,13 +26,22 @@ export class HouseForm extends Component {
         const { name } = this.state;
       try {
         const resp = await getHouses();
-        await console.log(resp);
         givenHouse(resp);
         wizardsName(name);
+        this.foundSpells();
     } catch (error) {
         this.setState({ hasError : error });
     }
-}
+  }
+
+   foundSpells = async () => {
+     try {
+       const resp = await getSpells();
+       await console.log(resp)
+     } catch (error) {
+      this.setState({ hasError : error });
+     }
+   }
 
 render() {
       return (

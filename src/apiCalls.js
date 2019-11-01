@@ -10,3 +10,14 @@ export const getHouses = async () => {
       return data;
     }
 }
+
+export const getSpells = async () => {
+  const response = await fetch(`https://www.potterapi.com/v1/spells?key=${apiKey}`);
+  const data = await response.json();
+
+  if(!response.ok) {
+    throw new Error('No Spells Found!');
+  } else {
+    return data;
+  }
+}
