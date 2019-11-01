@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './HouseForm.css';
 import { getHouses } from '../../apiCalls';
+import { connect } from 'react-redux';
+import { givenHouse } from '../../actions';
 
 export class HouseForm extends Component {
     constructor() {
@@ -47,4 +49,8 @@ export class HouseForm extends Component {
     }
 }
 
-// export default HouseForm;
+export const mapDispatchToProps = (dispatch) => ({
+    givenHouse: (house) => dispatch( givenHouse(house))
+})
+
+export default connect(null, mapDispatchToProps)(HouseForm);
