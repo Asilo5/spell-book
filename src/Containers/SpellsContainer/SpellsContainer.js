@@ -1,11 +1,12 @@
 import React from 'react';
 import  NavBar from '../NavBar/NavBar';
+import './SpellsContainer.css';
 
-const SpellsContainer = () => {
+const SpellsContainer = () => { 
     return (
-        <section>
+        <section className='spells-container'>
            <NavBar />
-        </section>
+        </section> 
     )
 }
 
