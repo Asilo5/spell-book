@@ -2,14 +2,18 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    background: linear-gradient( to left, #cc9721 22%,#ddab56 25%, #d4bc83 40%, #ccb37c 31%,#af8d25 45%,#ebb954 80%) left bottom transparent no-repeat;
+    background-size: 100% 5px;
 }
 
 h2 {
-    background: linear-gradient(to bottom, #cfc09f 22%,#cc8914 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#a36f04 78%);; 
+    background: linear-gradient(to bottom, #cfc09f 22%,#cc8914 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#a36f04 78%); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #fff;
-font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     position: relative;
 	text-transform: uppercase;	
 	font-size: 3vw;
@@ -19,9 +23,9 @@ font-family: 'Playfair Display', serif;
 
 .mascot-img {
     border-radius: 50%;
-    border: 2px solid black;
     padding: 12px;
     margin: 10px;
     height: 14em;
     width: 14em;
+    background: linear-gradient( to left, #cc9721 22%,#ddab56 25%, #d4bc83 40%, #ccb37c 31%,#af8d25 45%,#ebb954 80%) left bottom transparent no-repeat;
 }
