@@ -28,4 +28,9 @@ h2 {
     height: 14em;
     width: 14em;
     background: linear-gradient( to left, #cc9721 22%,#ddab56 25%, #d4bc83 40%, #ccb37c 31%,#af8d25 45%,#ebb954 80%) left bottom transparent no-repeat;
+    transition: all .2s ease-in-out;
+}
+
+.mascot-img:hover {
+  transform: scale(1.1);
 }
