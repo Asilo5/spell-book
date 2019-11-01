@@ -3,6 +3,7 @@ import './HouseForm.css';
 import { getHouses } from '../../apiCalls';
 import { connect } from 'react-redux';
 import { givenHouse } from '../../actions';
+import { Link } from 'react-router-dom';
 
 export class HouseForm extends Component {
     constructor() {
@@ -26,13 +27,11 @@ export class HouseForm extends Component {
         givenHouse(resp);
         nameOfWizard(wizardName);
     } catch (error) {
-        this.setState({ hasError : error })
+        this.setState({ hasError : error });
     }
 }
 
 render() {
-    const { userHouse } = this.props;
-    console.log(userHouse)
       return (
           <section className='form-section'>
               <form className='house-form'>
@@ -45,16 +44,17 @@ render() {
                          onChange={this.handleChange} />
                     <img className='name-banner' src='https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png' alt='banner name' />
                   </div>
-                  <div onClick={(e) => this.foundHouse(e)}>
-                    <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
-                    <h2 className='submit-text'>Enter</h2>
-                  </div>
+                  <Link to='/spells'>
+                    <div onClick={(e) => this.foundHouse(e)}>
+                      <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
+                      <h2 className='submit-text'>Enter</h2>
+                    </div>
+                  </Link>
               </form>
           </section>
       )
     }
 }
-
 
 export const mapDispatchToProps = (dispatch) => ({
     givenHouse: (house) => dispatch( givenHouse(house) ),

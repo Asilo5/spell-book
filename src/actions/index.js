@@ -12,3 +12,8 @@ export const wizardsName = (name) => ({
   type: 'NAME',
   name
 });
+
+export const hasError = (error) => ({
+  type: 'HAS_ERROR',
+  error
+})
