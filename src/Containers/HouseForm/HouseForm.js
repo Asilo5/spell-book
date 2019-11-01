@@ -56,10 +56,10 @@ render() {
                          onChange={this.handleChange} />
                     <img className='name-banner' src='https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png' alt='banner name' />
                   </div>
-                  <Link to='/spells' onClick={this.foundHouse}> 
-                    <div >
+                  <Link to='/spells' onClick={this.foundHouse} > 
+                    <div className='sorting-container'>
                       <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
-                      <h2 className='submit-text'>Enter</h2>
+                      <h3 className='submit-text'>Enter</h3>
                     </div>
                   </Link>
               </form>

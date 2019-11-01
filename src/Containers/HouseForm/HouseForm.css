@@ -38,15 +38,19 @@
 }
 
 .sorting-button {
-    height: 13em;
+    /* height: 13em; */
     width: 18em;
     display: block;
     margin: auto;
-    transition: transform .8s ease-in-out;
+    /* transition: transform .8s ease-in-out; */
     cursor: pointer;
 }
 
-.sorting-button:hover {
+.sorting-container {
+  transition: transform .8s ease-in-out;
+}
+
+.sorting-container:hover {
     transform: rotate(360deg);
 }
 
@@ -55,10 +59,16 @@
 }
 
 .submit-text {
-    position: relative;
-    text-align: center;
-    bottom: 80px;
-    color: white;
+  position: relative;
+  text-align: center;
+  bottom: 131px;
+  color: #f5be77;
+  font-size: 2em;
+  text-shadow: 2px 2px black;
+}
+
+a {
+  text-decoration: none;
 }
 
 @keyframes float {
