@@ -8,7 +8,8 @@ export class HouseForm extends Component {
     constructor() {
       super();
       this.state = {
-        wizardName : ''
+        wizardName : '',
+        hasError: ''
       }
     }
 
@@ -18,12 +19,14 @@ export class HouseForm extends Component {
 
     foundHouse = async (e) => {
         e.preventDefault();
-        const { givenHouse } = this.props;
+        const { givenHouse, nameOfWizard } = this.props;
+        const { wizardName } = this.state;
       try {
         const resp = await getHouses();
         givenHouse(resp);
+        nameOfWizard(wizardName);
     } catch (error) {
-        console.log(error)
+        this.setState({ hasError : error })
     }
 }
 
@@ -54,7 +57,9 @@ render() {
 
 
 export const mapDispatchToProps = (dispatch) => ({
-    givenHouse: (house) => dispatch( givenHouse(house))
+    givenHouse: (house) => dispatch( givenHouse(house) ),
+    isLoading: (bool) => dispatch( dispatch(bool) ),
+    nameOfWizard: (name) => dispatch( dispatch(name) )
 })
 
 export default connect(null, mapDispatchToProps)(HouseForm);
