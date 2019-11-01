@@ -27,13 +27,11 @@ export class HouseForm extends Component {
         givenHouse(resp);
         nameOfWizard(wizardName);
     } catch (error) {
-        this.setState({ hasError : error })
+        this.setState({ hasError : error });
     }
 }
 
 render() {
-    const { userHouse } = this.props;
-    console.log(userHouse)
       return (
           <section className='form-section'>
               <form className='house-form'>
