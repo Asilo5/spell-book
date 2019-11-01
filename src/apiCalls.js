@@ -12,7 +12,7 @@ export const getHouses = async () => {
 }
 
 export const getSpells = async () => {
-  const response = await fetch(`https://www.potterapi.com/v1/spells${apiKey}`);
+  const response = await fetch(`https://www.potterapi.com/v1/spells?key=${apiKey}`);
   const data = await response.json();
 
   if(!response.ok) {
