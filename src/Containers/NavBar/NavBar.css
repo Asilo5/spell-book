@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2 {
+  color: white;
+}
+
+.mascot-img {
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 12px;
+    margin: 10px;
+    height: 14em;
+    width: 14em;
+}
