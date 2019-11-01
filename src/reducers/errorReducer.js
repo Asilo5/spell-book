@@ -3,6 +3,6 @@ export const errorMsg = (state = '', action) => {
     case 'HAS_ERROR':
       return action.error;
     default:
-      return state
+      return state;
   }
 }
