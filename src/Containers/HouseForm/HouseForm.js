@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './HouseForm.css';
 import { getHouses } from '../../apiCalls';
+import { connect } from 'react-redux';
+import { givenHouse } from '../../actions';
 
 export class HouseForm extends Component {
     constructor() {
       super();
       this.state = {
-        wizardName : ''
+        wizardName : '',
+        hasError: ''
       }
     }
 
@@ -16,15 +19,20 @@ export class HouseForm extends Component {
 
     foundHouse = async (e) => {
         e.preventDefault();
+        const { givenHouse, nameOfWizard } = this.props;
+        const { wizardName } = this.state;
       try {
         const resp = await getHouses();
-        console.log(resp);
-      } catch (error) {
-          console.log(error)
-      }
+        givenHouse(resp);
+        nameOfWizard(wizardName);
+    } catch (error) {
+        this.setState({ hasError : error })
     }
+}
 
-    render() {
+render() {
+    const { userHouse } = this.props;
+    console.log(userHouse)
       return (
           <section className='form-section'>
               <form className='house-form'>
@@ -35,10 +43,10 @@ export class HouseForm extends Component {
                          name='wizardName' 
                          value={this.state.wizardName} 
                          onChange={this.handleChange} />
-                    <img className='name-banner' src='https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png' alt='banner name image' />
+                    <img className='name-banner' src='https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png' alt='banner name' />
                   </div>
                   <div onClick={(e) => this.foundHouse(e)}>
-                    <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat image' />
+                    <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
                     <h2 className='submit-text'>Enter</h2>
                   </div>
               </form>
@@ -47,4 +55,11 @@ export class HouseForm extends Component {
     }
 }
 
-// export default HouseForm;
+
+export const mapDispatchToProps = (dispatch) => ({
+    givenHouse: (house) => dispatch( givenHouse(house) ),
+    isLoading: (bool) => dispatch( dispatch(bool) ),
+    nameOfWizard: (name) => dispatch( dispatch(name) )
+})
+
+export default connect(null, mapDispatchToProps)(HouseForm);
