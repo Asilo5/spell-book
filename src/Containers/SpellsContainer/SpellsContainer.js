@@ -1,7 +1,12 @@
 import React from 'react';
+import  NavBar from '../NavBar/NavBar';
 
-export const SpellsContainer = () => {
+const SpellsContainer = () => {
     return (
-        
+        <section>
+           <NavBar />
+        </section>
     )
 }
+
+export default SpellsContainer;

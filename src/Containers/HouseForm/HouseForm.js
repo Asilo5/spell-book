@@ -58,7 +58,6 @@ render() {
     }
 }
 
-
 export const mapDispatchToProps = (dispatch) => ({
     givenHouse: (house) => dispatch( givenHouse(house) ),
     isLoading: (bool) => dispatch( dispatch(bool) ),
