@@ -18,15 +18,18 @@ export class HouseForm extends Component {
 
     foundHouse = async (e) => {
         e.preventDefault();
+        const { givenHouse } = this.props;
       try {
         const resp = await getHouses();
-        console.log(resp);
-      } catch (error) {
-          console.log(error)
-      }
+        givenHouse(resp);
+    } catch (error) {
+        console.log(error)
     }
+}
 
-    render() {
+render() {
+    const { userHouse } = this.props;
+    console.log(userHouse)
       return (
           <section className='form-section'>
               <form className='house-form'>
@@ -48,6 +51,7 @@ export class HouseForm extends Component {
       )
     }
 }
+
 
 export const mapDispatchToProps = (dispatch) => ({
     givenHouse: (house) => dispatch( givenHouse(house))
