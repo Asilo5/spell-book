@@ -28,12 +28,13 @@ export class HouseForm extends Component {
         const resp = await getHouses();
         givenHouse(resp);
         wizardsName(name);
+        this.foundSpells();
     } catch (error) {
         this.setState({ hasError : error });
     }
   }
 
-   componentDidMount = async () => {
+   foundSpells = async () => {
      try {
        const resp = await getSpells();
        await console.log(resp)
