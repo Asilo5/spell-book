@@ -25,7 +25,7 @@
 .wizard-name {
     font-size: 35px;
     border: none;
-    z-index: 10;
+    letter-spacing: 2px;
     background: transparent;
     position: absolute;
     top: 1em;
