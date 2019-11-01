@@ -1,11 +1,11 @@
 import React from 'react';
 import  NavBar from '../NavBar/NavBar';
 
-const SpellsContainer = () => {
+const SpellsContainer = () => { 
     return (
         <section>
            <NavBar />
-        </section>
+        </section> 
     )
 }
 
