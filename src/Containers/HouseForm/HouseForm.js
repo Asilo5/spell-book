@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './HouseForm.css';
 import { getHouses, getSpells } from '../../apiCalls';
 import { connect } from 'react-redux';
-import { givenHouse, isLoading, wizardsName } from '../../actions';
+import { givenHouse, isLoading, wizardsName, hasSpells } from '../../actions';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
@@ -35,9 +35,11 @@ export class HouseForm extends Component {
   }
 
    foundSpells = async () => {
+     const { hasSpells } = this.props;
      try {
        const resp = await getSpells();
        await console.log(resp)
+       hasSpells(resp);
      } catch (error) {
       this.setState({ hasError : error });
      }
@@ -72,7 +74,8 @@ export const mapDispatchToProps = (dispatch) => (
    bindActionCreators({
      givenHouse: house => dispatch( givenHouse(house) ),
      isLoading: bool => dispatch( isLoading(bool) ),
-     wizardsName: name => dispatch( wizardsName(name) )
+     wizardsName: name => dispatch( wizardsName(name) ),
+     hasSpells: spells => dispatch( hasSpells(spells) )
    }, dispatch)
 )
 
