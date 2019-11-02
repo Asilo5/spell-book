@@ -15,7 +15,14 @@ describe('apiCalls', () => {
             })
         })
 
-        it('should fetch with correct URL')
+        it('should fetch with correct URL', () => {
+           getHouses('https://www.potterapi.com/v1/sortingHat');
+           expect(window.fetch).toHaveBeenCalledWith('https://www.potterapi.com/v1/sortingHat');
+        });
+
+        it('should return houses data (Happy Path)', () => {
+            getHouses().then((results) => expect(results).toEqual(mockHouses));
+        })
 
     });
 
