@@ -5,7 +5,7 @@ import './SpellsContainer.css';
 const SpellsContainer = () => { 
     return (
         <section className='spells-container'>
-           <NavBar />
+           <NavBar /> 
         </section> 
     )
 }
