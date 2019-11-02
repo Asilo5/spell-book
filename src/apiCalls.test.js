@@ -70,5 +70,24 @@ describe('apiCalls', () => {
           expect(window.fetch).toHaveBeenCalledWith(`https://www.potterapi.com/v1/spells?key=${apiKey}`);
         });
 
+        it('should return spells data (Happy Path)', () => {
+            getSpells().then((results) => expect(results).toEqual(mockSpells));
+        });
+
+        it('should return an error if response is not ok (Sad Path)', () => {
+           window.fetch = jest.fn().mockImplementation(() => {
+               Promise.resolve({
+                   ok: false
+               })
+           })
+        });
+
+        it('should return an error if fetch fails', () => {
+            window.fetch = jest.fn().mockImplementation(() => {
+                return Promise.reject(Error('Muggle Error'))
+            });
+            expect(getHouses()).rejects.toEqual(Error('Muggle Error'));
+        })
+
     });
 })
