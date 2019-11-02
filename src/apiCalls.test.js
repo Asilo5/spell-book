@@ -22,8 +22,22 @@ describe('apiCalls', () => {
 
         it('should return houses data (Happy Path)', () => {
             getHouses().then((results) => expect(results).toEqual(mockHouses));
-        })
+        });
 
+        it('should return an error if response is not ok (Sad Path)', () => {
+            window.fetch = jest.fn().mockImplementation(() => {
+              return Promise.resolve({
+                  ok: false
+              })
+            })
+        });
+
+        it('should return an error if fetch fails', () => {
+            window.fetch = jest.fn().mockImplementation(() => {
+              return Promise.reject(Error('Muggle Error'))
+            })
+            expect(getHouses()).rejects.toEqual(Error('Muggle Error'));
+        });
     });
 
     describe('getSpells', () => {
@@ -49,7 +63,12 @@ describe('apiCalls', () => {
            })
         });
        
-        it('')
+        it('should fetch with correct URL', () => {
+            const apiKey = `$2a$10$s7FC7dj4ik0afkB/Dnr4Ju6NXS0Os8RtRntk97bi8gx.KqvmqgNgK`;
+          getSpells(`https://www.potterapi.com/v1/spells?key=${apiKey}`);
+
+          expect(window.fetch).toHaveBeenCalledWith(`https://www.potterapi.com/v1/spells?key=${apiKey}`);
+        });
 
     });
 })
