@@ -17,3 +17,8 @@ export const hasError = (error) => ({
   type: 'HAS_ERROR',
   error
 })
+
+export const hasSpells = (spells) => ({
+  type: 'HAS_SPELLS',
+  spells
+})
