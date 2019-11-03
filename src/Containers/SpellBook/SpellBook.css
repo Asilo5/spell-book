@@ -1,0 +1,47 @@
+.spell-container {
+    text-align: center;
+     position: relative;
+    top: 10em;
+    width: 44%;
+   margin: auto;
+}
+
+.spell-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 12em;
+}
+
+.spell-info > h3 {
+  font-family: 'Henny Penny', cursive;
+  color: black;
+  font-size: 4em;
+}
+
+.spell-info > h4 {
+  margin-top: -2em;
+  font-size: 20px;
+}
+
+.spell-info > p {
+  font-size: 30px;
+}
+  
+.favourite-wand {
+   height: 8em;
+   margin-left: 30em;
+   transform: rotate(13deg);
+   transition: linear 2s ease-in-out;
+   cursor: grab;
+}
+
+.favourite-wand:hover {
+  transform: rotate(-13deg);
+}
+  
+.paper-img {
+  display: block;
+  margin: auto;
+  margin-top: -13em;
+}
