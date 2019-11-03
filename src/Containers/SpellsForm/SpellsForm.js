@@ -26,7 +26,7 @@ class SpellsForm extends Component {
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
 
-    hasSpells(chosenOne)
+    hasSpells(chosenOne);
 
     this.resetInputs();
   }
