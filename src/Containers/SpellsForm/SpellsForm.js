@@ -8,8 +8,8 @@ class SpellsForm extends Component {
     }
   }
 
-  handleChange = () => {
-    this.setState({ [this.state.name] : this.state.value })
+  handleChange = (e) => {
+    this.setState({ [e.target.name] : e.target.value })
   }
 
   render() {
@@ -19,7 +19,7 @@ class SpellsForm extends Component {
                     placeholder='Search for Spell'
                     type='text'
                     name='spell' 
-                    value='this.state.spell' 
+                    value={this.state.spell}
                     onChange={this.handleChange}/>
             <button>Accio!</button>
         </form>
