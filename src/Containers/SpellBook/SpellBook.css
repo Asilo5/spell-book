@@ -1,9 +1,9 @@
 .spell-container {
-    text-align: center;
-     position: relative;
-    top: 10em;
-    width: 44%;
-   margin: auto;
+  text-align: center;
+  position: relative;
+  top: 2em;
+  width: 44%;
+  margin: auto;
 }
 
 .spell-info {
@@ -43,5 +43,5 @@
 .paper-img {
   display: block;
   margin: auto;
-  margin-top: -13em;
+  margin-top: -20em;
 }
