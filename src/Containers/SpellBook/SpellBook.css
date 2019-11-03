@@ -31,6 +31,13 @@
 .favourite-wand {
    height: 8em;
    margin-left: 30em;
+   transform: rotate(13deg);
+   transition: linear 2s ease-in-out;
+   cursor: grab;
+}
+
+.favourite-wand:hover {
+  transform: rotate(-13deg);
 }
   
 .paper-img {
