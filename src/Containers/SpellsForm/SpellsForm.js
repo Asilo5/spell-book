@@ -35,9 +35,17 @@ class SpellsForm extends Component {
     this.setState({ chosenSpell : '' });
   }
 
+  backToAllSpells = (e) => {
+    e.preventDefault();
+    const { spellBook, searchedSpell } = this.props;
+
+     searchedSpell(spellBook);
+  }
+
   render() {
     return (
         <form className='search-form'>
+            <button onClick={this.backToAllSpells}>All Spells</button>
             <input className='search-spells'
                     placeholder='Search for Spell'
                     type='text'
