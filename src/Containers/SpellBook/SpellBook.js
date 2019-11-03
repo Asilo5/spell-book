@@ -1,9 +1,10 @@
 import React from 'react';
+import './SpellBook.css';
 
 const SpellBook = ({id, spell, type, effect}) => {
   return (
       <section id={id}>
-          <div>
+          <div className='spell-info'>
             <img className='favourite-wand' src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
             <h2>{spell}</h2>
             <h3>{type}</h3>

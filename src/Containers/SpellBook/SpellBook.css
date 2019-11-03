@@ -1,0 +1,14 @@
+.spell-info {
+  text-align: center;
+  position: relative;
+  top: 17em;
+}
+
+.favourite-wand {
+  height: 8em;
+}
+
+.paper-img {
+  display: block;
+  margin: auto;
+}
