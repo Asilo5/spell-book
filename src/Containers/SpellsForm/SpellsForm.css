@@ -22,7 +22,17 @@
     cursor: pointer;
 }
 
-.accio-btn:hover {
+.accio-btn:hover, .all-spells-btn:hover {
    font-weight: bold;
+}
+
+.all-spells-btn {
+  background: linear-gradient( to left, #d6a73e 22%,#d2a559 25%, #d4bc83 40%, #e3ba62 31%,#d8af32 45%,#d09532 80%) left bottom transparent no-repeat;
+  border: none;
+  font-size: 27px;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
