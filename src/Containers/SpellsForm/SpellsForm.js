@@ -43,10 +43,9 @@ class SpellsForm extends Component {
 
   render() {
       const { selectedSpell } = this.props;
-      console.log('length of Spells ', selectedSpell.length);
     return (
         <form className='search-form'>
-            {selectedSpell.length === 1 && <button onClick={this.backToAllSpells}>All Spells</button>}
+           {selectedSpell.length === 1 && <button className='all-spells-btn' onClick={this.backToAllSpells}>All Spells</button>}
             <input className='search-spells'
                     placeholder='Search for Spell'
                     type='text'
