@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class SpellsForm extends Component {
   constructor() {
@@ -15,17 +16,20 @@ class SpellsForm extends Component {
   findSpell = (e) => {
     e.preventDefault();
     const { chosenSpell } = this.state;
+    const { spellBook } = this.props;
 
-    let chosenOne = spells.filter((spell) => {
+    let chosenOne = spellBook.filter((spell) => {
         let lowerCaseSpells = spell.spell.toLowerCase();
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
+
+    console.log(chosenOne)
 
     this.resetInputs();
   }
 
   resetInputs = () => {
-    this.setState({ spell : '' });
+    this.setState({ chosenSpell : '' });
   }
 
   render() {
@@ -37,10 +41,14 @@ class SpellsForm extends Component {
                     name='chosenSpell' 
                     value={this.state.chosenSpell}
                     onChange={this.handleChange}/>
-            <button>Accio!</button>
+            <button className='accio-btn' onClick={this.findSpell}>Accio!</button>
         </form>
     )
   }
 }
 
-export default SpellsForm;
+export const mapStateToProps = ({spellBook}) => ({
+    spellBook
+})
+
+export default connect(mapStateToProps)(SpellsForm);
