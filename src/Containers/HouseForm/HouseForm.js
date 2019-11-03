@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './HouseForm.css';
 import { getHouses, getSpells } from '../../apiCalls';
 import { connect } from 'react-redux';
-import { givenHouse, isLoading, wizardsName, hasSpells } from '../../actions';
+import { givenHouse, isLoading, wizardsName, hasSpells, searchedSpell } from '../../actions';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
@@ -17,8 +17,6 @@ export class HouseForm extends Component {
 
     handleChange = (e) => {
       this.setState({ [e.target.name] : e.target.value })
-      console.log(this.state.name)
-
     }
 
     foundHouse = async () => {
@@ -35,11 +33,11 @@ export class HouseForm extends Component {
   }
 
    foundSpells = async () => {
-     const { hasSpells } = this.props;
+     const { hasSpells, searchedSpell } = this.props;
      try {
        const resp = await getSpells();
-       await console.log(resp)
        hasSpells(resp);
+       searchedSpell(resp);
      } catch (error) {
       this.setState({ hasError : error });
      }
@@ -75,7 +73,8 @@ export const mapDispatchToProps = (dispatch) => (
      givenHouse: house => dispatch( givenHouse(house) ),
      isLoading: bool => dispatch( isLoading(bool) ),
      wizardsName: name => dispatch( wizardsName(name) ),
-     hasSpells: spells => dispatch( hasSpells(spells) )
+     hasSpells: spells => dispatch( hasSpells(spells) ),
+     searchedSpell: spell => dispatch( searchedSpell(spell) )
    }, dispatch)
 )
 
