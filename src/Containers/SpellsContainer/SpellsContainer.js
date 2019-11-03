@@ -5,8 +5,9 @@ import SpellsForm from '../SpellsForm/SpellsForm';
 import './SpellsContainer.css';
 import { connect } from 'react-redux';
 
-const SpellsContainer = ({spellBook}) => { 
-  const completeSpells = spellBook.map((spell) => {
+const SpellsContainer = ({selectedSpell}) => { 
+    console.log(selectedSpell);
+  const completeSpells = selectedSpell.map((spell) => {
       return <SpellBook key={spell.id} {...spell}/>
   })
     return (
@@ -18,8 +19,8 @@ const SpellsContainer = ({spellBook}) => {
     )
 }
 
-export const mapStateToProps = ({ spellBook }) => ({
-    spellBook 
+export const mapStateToProps = ({ selectedSpell }) => ({
+    selectedSpell
 })
 
 export default connect(mapStateToProps)(SpellsContainer);

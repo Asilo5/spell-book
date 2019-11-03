@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { hasSpells } from '../../actions';
+import { hasSpells, searchedSpell } from '../../actions';
 import './SpellsForm.css';
 
 class SpellsForm extends Component {
@@ -19,14 +19,14 @@ class SpellsForm extends Component {
   findSpell = (e) => {
     e.preventDefault();
     const { chosenSpell } = this.state;
-    const { spellBook, hasSpells } = this.props;
+    const { spellBook, searchedSpell } = this.props;
 
-    let chosenOne = spellBook.filter((spell) => {
+    let chosenOne = spellBook.find((spell) => {
         let lowerCaseSpells = spell.spell.toLowerCase();
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
 
-    hasSpells(chosenOne)
+     searchedSpell([chosenOne]);
 
     this.resetInputs();
   }
@@ -56,7 +56,8 @@ export const mapStateToProps = ({spellBook}) => ({
 
 export const mapDispatchToProps = (dispatch) => (
     bindActionCreators({
-      hasSpells: spells => dispatch( hasSpells(spells) )
+      hasSpells: spells => dispatch( hasSpells(spells) ),
+      searchedSpell: spell => dispatch( searchedSpell(spell) )
     }, dispatch)
  )
 
