@@ -1,6 +1,6 @@
 # Spell Book
 
-...
+Spell Book is an app where the user (witch/wizard) is sorted into a Hogwarts house. Once in a house, the user is able to search through spells, and whichever spell they fancy, they can favourite to be able to use later.
 
 ## Created by:
 - [Amanda Consuelo Sierra](https://github.com/Asilo5)
