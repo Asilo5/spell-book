@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { hasSpells } from '../../actions';
+import './SpellsForm.css';
 
 class SpellsForm extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class SpellsForm extends Component {
 
   render() {
     return (
-        <form>
+        <form className='search-form'>
             <input className='search-spells'
                     placeholder='Search for Spell'
                     type='text'
