@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { hasSpells } from '../../actions';
 
 class SpellsForm extends Component {
   constructor() {
@@ -16,14 +18,14 @@ class SpellsForm extends Component {
   findSpell = (e) => {
     e.preventDefault();
     const { chosenSpell } = this.state;
-    const { spellBook } = this.props;
+    const { spellBook, hasSpells } = this.props;
 
     let chosenOne = spellBook.filter((spell) => {
         let lowerCaseSpells = spell.spell.toLowerCase();
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
 
-    console.log(chosenOne)
+    hasSpells(chosenOne)
 
     this.resetInputs();
   }
@@ -49,6 +51,12 @@ class SpellsForm extends Component {
 
 export const mapStateToProps = ({spellBook}) => ({
     spellBook
-})
+});
 
-export default connect(mapStateToProps)(SpellsForm);
+export const mapDispatchToProps = (dispatch) => (
+    bindActionCreators({
+      hasSpells: spells => dispatch( hasSpells(spells) )
+    }, dispatch)
+ )
+
+export default connect(mapStateToProps, mapDispatchToProps)(SpellsForm);
