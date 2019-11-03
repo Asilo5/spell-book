@@ -1,14 +1,29 @@
-.spell-info {
+.spells {
+  margin-top: -10em;
+}
+
+.spell-container {
   text-align: center;
   position: relative;
-  top: 17em;
+  top: 10em;
+  width: 44%;
+  margin: auto;
+}
+
+.spell-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 12em;
 }
 
 .favourite-wand {
   height: 8em;
+  margin-left: 30em;
 }
 
 .paper-img {
   display: block;
   margin: auto;
+  margin-top: -13em;
 }
