@@ -1,0 +1,28 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.search-spells {
+    font-size: 27px;
+    padding: 5px;
+    width: 15%;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    border: 2px solid #d4a035;
+}
+
+.accio-btn {
+    background: linear-gradient( to left, #d6a73e 22%,#d2a559 25%, #d4bc83 40%, #e3ba62 31%,#d8af32 45%,#d09532 80%) left bottom transparent no-repeat;
+    border: none;
+    font-size: 27px;
+    padding: 4px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.accio-btn:hover {
+   font-weight: bold;
+}
+
