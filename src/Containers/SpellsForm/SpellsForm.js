@@ -38,14 +38,15 @@ class SpellsForm extends Component {
   backToAllSpells = (e) => {
     e.preventDefault();
     const { spellBook, searchedSpell } = this.props;
-
-     searchedSpell(spellBook);
+    searchedSpell(spellBook);
   }
 
   render() {
+      const { selectedSpell } = this.props;
+      console.log('length of Spells ', selectedSpell.length);
     return (
         <form className='search-form'>
-            <button onClick={this.backToAllSpells}>All Spells</button>
+            {selectedSpell.length === 1 && <button onClick={this.backToAllSpells}>All Spells</button>}
             <input className='search-spells'
                     placeholder='Search for Spell'
                     type='text'
@@ -58,8 +59,9 @@ class SpellsForm extends Component {
   }
 }
 
-export const mapStateToProps = ({spellBook}) => ({
-    spellBook
+export const mapStateToProps = ({spellBook, selectedSpell}) => ({
+    spellBook,
+    selectedSpell
 });
 
 export const mapDispatchToProps = (dispatch) => (
