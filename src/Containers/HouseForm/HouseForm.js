@@ -36,8 +36,12 @@ export class HouseForm extends Component {
      const { hasSpells, searchedSpell } = this.props;
      try {
        const resp = await getSpells();
-       hasSpells(resp);
-       searchedSpell(resp);
+       let updateResp = resp.map((spell) => {
+         spell.isFavourite = false;
+         return spell;
+       });
+       hasSpells(updateResp);
+       searchedSpell(updateResp);
      } catch (error) {
       this.setState({ hasError : error });
      }

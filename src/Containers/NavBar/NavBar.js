@@ -4,7 +4,6 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({userHouse, nameOfWizard}) => {
-   console.log(userHouse);
     return (
         <nav>
             <h2>{nameOfWizard}</h2>
