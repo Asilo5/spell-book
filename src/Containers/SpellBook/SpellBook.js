@@ -8,7 +8,7 @@ class SpellBook extends Component {
   constructor() {
     super();
     this.state = {
-      isFavourite : false
+      isFavourite : !false
     }
   }
 

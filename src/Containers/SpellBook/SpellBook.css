@@ -45,3 +45,15 @@
   margin: auto;
   margin-top: -20em;
 }
+
+.chosen-wand {
+  height: 8em;
+  margin-left: 30em;
+  transform: rotate(110deg);
+  transition: linear 2s ease-in-out;
+  cursor: grab;
+}
+
+.chosen-wand:hover {
+  transform: rotate(125deg);
+}
