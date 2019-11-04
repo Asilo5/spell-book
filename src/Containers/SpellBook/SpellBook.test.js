@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SpellBook, mapStateToProps, mapDispatchToProps } from './SpellBook';
+import { addFavourite, deleteFavourite } from '../../actions';
+
 
 describe('SpellBook', () => {
  
@@ -87,7 +89,24 @@ describe('SpellBook', () => {
     })
 
     describe('mapDispatchToProps', () => {
-        
+        it('calls dispatch with an addFavourite action when toggleFavourite is called', () => {
+            const mockDispatch = jest.fn();
+            const actionToDispatch = addFavourite('77478');
+
+            const mappedProps = mapDispatchToProps(mockDispatch);
+            mappedProps.addFavourite('77478')
+
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+          });
+
+          it('calls dispatch with an deleteFavourite action when toggleFavourite is called', () => {
+            const mockDispatch = jest.fn();
+            const actionToDispatch = deleteFavourite('d4545');
+            const mappedProps = mapDispatchToProps(mockDispatch);
+
+            mappedProps.deleteFavourite('d4545')
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+          });
     })
 
 })
