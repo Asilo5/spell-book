@@ -5,31 +5,28 @@ import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
 
 class SpellBook extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isFavourite : false
+    }
+  }
 
   toggleFavourtie = () => {
-    const { _id } = this.props;
-   // if id is already in the favourites add into addFavourites
-   // else deleteFavourites 
-   const { addFavourite, deleteFavourite, favouriteSpells } = this.props;
-   console.log(addFavourite);
-  //  let bob = favouriteSpells.find((spell) => spell.id === id);
-  //  console.log(bob);
+   const { isFavourite } = this.state;
+   const { addFavourite, deleteFavourite, favouriteSpells, _id } = this.props;
+   this.setState({ isFavourite : !this.state.isFavourite })
+   console.log(isFavourite );
    favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
-
-  
-
   } 
 
-  // <img onClick={this.toggleFavourtie} className={isFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
-
-
   render() {
-    const {id, spell, type, effect, isFavourite, favouriteSpells} = this.props;
-    console.log(favouriteSpells);
+    const { isFavourite } = this.state;
+    const { spell, type, effect } = this.props;
     return (
         <section className='spells' >
             <div className='spell-container'>
-              <img onClick={() => this.toggleFavourtie()} className='favourite-wand' src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
+              <img onClick={() => this.toggleFavourtie()} className={isFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
                 <h3>{spell}</h3>
                 <h4>{type}</h4>
