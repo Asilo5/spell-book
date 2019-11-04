@@ -52,6 +52,12 @@
   transform: rotate(110deg);
   transition: linear 2s ease-in-out;
   cursor: grab;
+  border-radius: 50%;
+  background-color: #ffeb00b8;
+  box-shadow: 
+    0 0px 1px #ffeb0045, 
+    0 0 86px 19px #ffeb3b73, 
+    0 0 23px 46px #ffeb3b9c;
 }
 
 .chosen-wand:hover {
