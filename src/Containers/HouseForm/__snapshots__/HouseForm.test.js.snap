@@ -25,6 +25,7 @@ exports[`HouseForm Form should match snapshot with all information passing throu
       />
     </div>
     <Link
+      disabled={true}
       onClick={[Function]}
       to="/spells"
     >

@@ -7,4 +7,4 @@ export const favouriteSpells = ( state = [], action ) => {
         default:
           return state;
     }  
-}
+} 
