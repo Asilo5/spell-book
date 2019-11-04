@@ -5,4 +5,4 @@ export const selectedSpell = ( state = [], action) => {
     default:
       return state;
   }
-}
+} 
