@@ -91,4 +91,15 @@
       const result = actions.searchedSpell(spells);
       expect(result).toEqual(expectedAction);
     })
+
+    it('should have type of ADD_FAVOURITE', () => {
+      const spellId = '13242423';
+      const expectedAction = {
+        type: 'ADD_FAVOURITE',
+        id: '13242423'
+      }
+
+      const result = actions.addFavourite(spellId);
+      expect(result).toEqual(expectedAction);
+    })
  })
