@@ -6,5 +6,5 @@ export const favouriteSpells = ( state = [], action ) => {
           return state.filter((spell) => spell.id !== action.id);
         default:
           return state;
-    } 
+    }  
 }
