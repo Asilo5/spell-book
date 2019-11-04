@@ -5,11 +5,11 @@ import SpellsForm from '../SpellsForm/SpellsForm';
 import './SpellsContainer.css';
 import { connect } from 'react-redux';
 
-const SpellsContainer = ({selectedSpell}) => { 
+export const SpellsContainer = ({selectedSpell}) => { 
   const completeSpells = selectedSpell.map((spell) => {
       return <SpellBook key={spell.id} {...spell}/>
   })
-    return (
+    return ( 
         <section className='spells-container'>
            <NavBar />
            <SpellsForm />
