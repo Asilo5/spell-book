@@ -13,7 +13,11 @@ export const SpellsContainer = ({selectedSpell}) => {
         <section className='spells-container'>
            <NavBar />
            <SpellsForm />
-           {completeSpells} 
+           <div className='completed-spells'>
+               <p> B </p>
+             {completeSpells} 
+               <p> F </p>
+           </div>
         </section> 
     )
 }

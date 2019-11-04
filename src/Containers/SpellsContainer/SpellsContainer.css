@@ -4,3 +4,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.completed-spells {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.completed-spells > p {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
