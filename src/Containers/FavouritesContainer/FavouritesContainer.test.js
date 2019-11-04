@@ -38,7 +38,7 @@ describe('FavouritesContainer', () => {
     })
 
     describe('mapStateToProps', () => {
-        it('should return a spell object', () => {
+        it('should return a spellBook and favouriteSpell object', () => {
             const mockState = {
                "favouriteSpells": [   
                 { _id: '5b74f3653228320021ab628b',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SpellBook.css';
+import './SpellBook.css'; 
 import { connect } from 'react-redux';
 import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
@@ -15,7 +15,6 @@ export class SpellBook extends Component {
   toggleFavourtie = () => {
    const { addFavourite, deleteFavourite, favouriteSpells, _id, isFavourite} = this.props;
    this.setState({ chosenFavourite : !this.state.chosenFavourite })
-  //  isFavourite(this.state.isFavourite)
    favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
   } 
 
