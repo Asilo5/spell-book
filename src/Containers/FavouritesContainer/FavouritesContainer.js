@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SpellBook from '../SpellBook/SpellBook';
 import { Link } from 'react-router-dom';
+import './FavouritesContainer.css';
 
 const FavouritesContainer = ({favouriteSpells, spellBook}) => {
    const findSpell = favouriteSpells.map((id) => {
@@ -13,7 +14,7 @@ const FavouritesContainer = ({favouriteSpells, spellBook}) => {
   })
 
     return (
-      <section>
+      <section className='favourites-container'>
           <Link to='/spells'>
             <button>Back</button>
           </Link>
