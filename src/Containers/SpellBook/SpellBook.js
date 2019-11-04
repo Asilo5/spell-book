@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SpellBook.css';
+import './SpellBook.css'; 
 import { connect } from 'react-redux';
 import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
@@ -12,10 +12,9 @@ export class SpellBook extends Component {
     }
   }
 
-  toggleFavourtie = () => {
+  toggleFavourite = () => {
    const { addFavourite, deleteFavourite, favouriteSpells, _id, isFavourite} = this.props;
    this.setState({ chosenFavourite : !this.state.chosenFavourite })
-  //  isFavourite(this.state.isFavourite)
    favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
   } 
 
@@ -25,7 +24,7 @@ export class SpellBook extends Component {
     return (
         <section className='spells' >
             <div className='spell-container'>
-              <img onClick={() => this.toggleFavourtie()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
+              <img onClick={() => this.toggleFavourite()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
                 <h3>{spell}</h3>
                 <h4>{type}</h4>

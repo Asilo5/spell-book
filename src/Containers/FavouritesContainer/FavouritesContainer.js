@@ -1,10 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; 
 import SpellBook from '../SpellBook/SpellBook';
 import { Link } from 'react-router-dom';
 import './FavouritesContainer.css';
 
-const FavouritesContainer = ({favouriteSpells, spellBook}) => {
+export const FavouritesContainer = ({favouriteSpells, spellBook}) => {
    const findSpell = favouriteSpells.map((id) => {
     return spellBook.find((spell) => spell._id === id);
   });

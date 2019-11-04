@@ -18,14 +18,15 @@ describe('NavBar', () => {
     })
 
     describe('mapStateToProps', () => {
-       it.skip('should return userHouse state', () => {
+       it('should return userHouse state', () => {
            const mockState = {
-            house: 'HufflePuff',
-            filter: 'GIVEN_HOUSE'
+            "userHouse": 'HufflePuff',
+            "nameOfWizard": 'Consuelo Weasley'
            };
            
            const expected = {
-             house: 'HufflePuff'
+             "userHouse": 'HufflePuff',
+             "nameOfWizard": 'Consuelo Weasley'
            };
 
            const mappedProps = mapStateToProps(mockState);

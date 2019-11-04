@@ -6,11 +6,15 @@ exports[`SpellsContainer Spells should match snapshot with all data being passed
 >
   <Connect(NavBar) />
   <Connect(SpellsForm) />
-  <Connect(SpellBook)
-    id="43453"
-    key="43453"
-    spell="Crucio"
-    type="curse"
-  />
+  <div
+    className="completed-spells"
+  >
+    <Connect(SpellBook)
+      id="43453"
+      key="43453"
+      spell="Crucio"
+      type="curse"
+    />
+  </div>
 </section>
 `;

@@ -12,5 +12,10 @@ exports[`App should match snapshot with correct data passing through 1`] = `
     path="/spells"
     render={[Function]}
   />
+  <Route
+    exact={true}
+    path="/favourites"
+    render={[Function]}
+  />
 </section>
 `;

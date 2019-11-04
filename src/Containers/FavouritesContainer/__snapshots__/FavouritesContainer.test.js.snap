@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavouritesContainer favourites should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="favourites-container"
+>
+  <Link
+    to="/spells"
+  >
+    <button
+      className="back-btn-fav"
+    >
+      Back
+    </button>
+  </Link>
+  <h2
+    className="favourites"
+  >
+    Favourite Spells
+  </h2>
+  <div
+    className="fav-spells"
+  >
+    <Connect(SpellBook) />
+  </div>
+</section>
+`;

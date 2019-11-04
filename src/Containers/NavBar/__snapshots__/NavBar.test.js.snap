@@ -4,12 +4,19 @@ exports[`NavBar Nav should match snapshot with all information passing in correc
 <nav>
   <h2>
     Bob Potter
+     Potter 
   </h2>
   <Link
     to="/"
   />
-  <h2>
-    Favourite Spells
-  </h2>
+  <NavLink
+    to="/favourites"
+  >
+    <h2
+      className="fav-link"
+    >
+      Favourite Spells
+    </h2>
+  </NavLink>
 </nav>
 `;

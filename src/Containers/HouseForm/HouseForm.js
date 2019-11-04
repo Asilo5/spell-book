@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { givenHouse, isLoading, wizardsName, hasSpells, searchedSpell } from '../../actions';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 export class HouseForm extends Component {
     constructor() {
@@ -20,12 +21,14 @@ export class HouseForm extends Component {
     }
 
     foundHouse = async () => {
-        const { givenHouse, wizardsName } = this.props;
+        const { givenHouse, wizardsName, isLoading } = this.props;
         const { name } = this.state;
       try {
         const resp = await getHouses();
+        // { isLoading && <LoadingPage /> }
         givenHouse(resp);
         wizardsName(name);
+        isLoading(false);
         this.foundSpells();
     } catch (error) {
         this.setState({ hasError : error });
