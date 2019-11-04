@@ -67,4 +67,28 @@
       const result = actions.hasSpells(spells);
       expect(result).toEqual(expectedAction);
     })
+
+    it('should have a type of SEARCHED_SPELL', () => {
+      const spells = [
+        {
+          id: '11234',
+          spell: 'Accio',
+          describe: 'Gets whatever you want to get'
+        }
+      ];
+
+      const expectedAction = {
+        type: 'SEARCHED_SPELL',
+        foundSpell: [
+          {
+            id: '11234',
+            spell: 'Accio',
+            describe: 'Gets whatever you want to get'
+          }
+        ]
+      };
+
+      const result = actions.searchedSpell(spells);
+      expect(result).toEqual(expectedAction);
+    })
  })
