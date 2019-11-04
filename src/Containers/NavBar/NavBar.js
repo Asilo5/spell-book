@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 
-const NavBar = ({userHouse, nameOfWizard}) => {
+export const NavBar = ({userHouse, nameOfWizard}) => {
     return ( 
         <nav>
             <h2>{nameOfWizard}</h2>

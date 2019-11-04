@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SpellsContainer should match snapshot with all data being passed in correctly 1`] = `
+exports[`SpellsContainer Spells should match snapshot with all data being passed in correctly 1`] = `
 <section
   className="spells-container"
 >
