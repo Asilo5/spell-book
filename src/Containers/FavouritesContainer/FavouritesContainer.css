@@ -7,3 +7,9 @@
 .favourites {
   text-align: center;
 }
+
+.fav-spells {
+  display: flex;
+  overflow-x: scroll;
+  margin: 50px 20px;
+}

@@ -19,7 +19,9 @@ const FavouritesContainer = ({favouriteSpells, spellBook}) => {
             <button>Back</button>
           </Link>
           <h2 className='favourites'>Favourites</h2>
+          <div className='fav-spells'>
             {favSpell}
+          </div>
       </section>
     )
 }
