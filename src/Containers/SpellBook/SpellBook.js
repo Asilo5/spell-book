@@ -8,25 +8,24 @@ class SpellBook extends Component {
   constructor() {
     super();
     this.state = {
-      isFavourite : !false
+      chosenFavourite : !false
     }
   }
 
   toggleFavourtie = () => {
-   const { isFavourite } = this.state;
-   const { addFavourite, deleteFavourite, favouriteSpells, _id } = this.props;
-   this.setState({ isFavourite : !this.state.isFavourite })
-   console.log(isFavourite );
+   const { addFavourite, deleteFavourite, favouriteSpells, _id, isFavourite} = this.props;
+   this.setState({ chosenFavourite : !this.state.chosenFavourite })
+  //  isFavourite(this.state.isFavourite)
    favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
   } 
 
   render() {
-    const { isFavourite } = this.state;
+    const { chosenFavourite } = this.state;
     const { spell, type, effect } = this.props;
     return (
         <section className='spells' >
             <div className='spell-container'>
-              <img onClick={() => this.toggleFavourtie()} className={isFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
+              <img onClick={() => this.toggleFavourtie()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
                 <h3>{spell}</h3>
                 <h4>{type}</h4>
