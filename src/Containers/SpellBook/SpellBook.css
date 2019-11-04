@@ -55,9 +55,9 @@
   border-radius: 50%;
   background-color: #ffeb00b8;
   box-shadow: 
-    0 0px 1px #ffeb0045, 
-    0 0 86px 19px #ffeb3b73, 
-    0 0 23px 46px #ffeb3b9c;
+  0 0px 1px #ffeb0045, 
+  0 0 28px 7px #ffeb3b8c, 
+  0 0 9px 18px #ffeb3b94;
 }
 
 .chosen-wand:hover {
