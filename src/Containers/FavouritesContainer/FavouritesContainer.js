@@ -1,18 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Favourite from '../Favourite/Favourite';
+import SpellBook from '../SpellBook/SpellBook';
 
 const FavouritesContainer = ({favouriteSpells, spellBook}) => {
-   const favSpell = spellBook.map((spell) => {
-       favouriteSpells.forEach((id) => {
-           if(spell._id === id) {
-             return spell;
-           }
-       })
-       return <Favourite {...spell} />
-   })
+   const findSpell = favouriteSpells.map((id) => {
+    return spellBook.find((spell) => spell._id === id);
+  });
 
-   console.log(favSpell);
+  const favSpell = findSpell.map((spell) => {
+    return <SpellBook {...spell} />
+  })
+
     return (
       <section>
          {favSpell}
