@@ -102,7 +102,19 @@ describe('HouseForm', () => {
        })
 
        it('should dispatch hasSpells when foundSpells is called', () => {
-           
+           const actionToDispatch = hasSpells(mockSpells);
+           const mappedProps = mapDispatchToProps(mockDispatch);
+
+           mappedProps.hasSpells(mockSpells);
+           expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
        })
+
+       it('should dispatch searchedSpell when foundSpells is called', () => {
+        const actionToDispatch = searchedSpell(mockSpells);
+        const mappedProps = mapDispatchToProps(mockDispatch);
+
+        mappedProps.searchedSpell(mockSpells);
+        expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+      })
     })
 })
