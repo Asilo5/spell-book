@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpellsContainer should match snapshot with all data being passed in correctly 1`] = `
+<section
+  className="spells-container"
+>
+  <Connect(NavBar) />
+  <Connect(SpellsForm) />
+  <Connect(SpellBook)
+    id="43453"
+    key="43453"
+    spell="Crucio"
+    type="curse"
+  />
+</section>
+`;

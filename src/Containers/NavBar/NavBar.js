@@ -4,7 +4,7 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({userHouse, nameOfWizard}) => {
-    return (
+    return ( 
         <nav>
             <h2>{nameOfWizard}</h2>
             <Link to='/'>
