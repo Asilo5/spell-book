@@ -6,7 +6,6 @@ import './SpellsContainer.css';
 import { connect } from 'react-redux';
 
 const SpellsContainer = ({selectedSpell}) => { 
-    console.log(selectedSpell);
   const completeSpells = selectedSpell.map((spell) => {
       return <SpellBook key={spell.id} {...spell}/>
   })

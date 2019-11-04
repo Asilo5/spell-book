@@ -27,3 +27,13 @@ export const searchedSpell = (foundSpell) => ({
   type: 'SEARCHED_SPELL',
   foundSpell
 })
+
+export const addFavourite = (id) => ({
+  type: 'ADD_FAVOURITE',
+  id
+})
+
+export const deleteFavourite = (id) => ({
+  type: 'DELETE_FAVOURITE',
+  id
+})
