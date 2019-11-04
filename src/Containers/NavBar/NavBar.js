@@ -14,7 +14,7 @@ export const NavBar = ({userHouse, nameOfWizard}) => {
               {userHouse === 'Slytherin' && <img className='mascot-img' src='https://www.pngkey.com/png/detail/226-2269266_slytherin-crest-png-harry-potter-slytherin-logo.png' alt='Slytherin mascot'/> }
             </Link>
             <NavLink to='/favourites'>
-              <h2>Favourite Spells</h2>
+              <h2 className='fav-link'>Favourite Spells</h2>
             </NavLink>
         </nav>
     )
