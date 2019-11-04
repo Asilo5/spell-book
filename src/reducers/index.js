@@ -5,6 +5,7 @@ import { nameOfWizard } from './nameReducer';
 import { errorMsg } from './errorReducer';
 import { spellBook } from './spellsReducer';
 import { selectedSpell } from './foundSpellReducer';
+import { favouriteSpells } from './favouritesReducer';
 
 const rootReducer = combineReducers({
     userHouse,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     nameOfWizard,
     errorMsg,
     spellBook,
-    selectedSpell
+    selectedSpell,
+    favouriteSpells
 });
 
 export default rootReducer;
