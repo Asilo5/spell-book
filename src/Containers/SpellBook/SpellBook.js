@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
 
-class SpellBook extends Component {
+export class SpellBook extends Component {
   constructor() {
     super();
     this.state = {

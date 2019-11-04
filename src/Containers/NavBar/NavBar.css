@@ -18,7 +18,12 @@ h2 {
 	text-transform: uppercase;	
 	font-size: 3vw;
 	margin: 0;
-	font-weight: 400;
+    font-weight: 400;
+    transition: margin 0.5s ease-in-out;
+}
+
+.fav-link:hover {
+  margin-bottom: 25px;
 }
 
 .mascot-img {

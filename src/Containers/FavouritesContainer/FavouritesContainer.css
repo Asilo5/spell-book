@@ -1,0 +1,56 @@
+.favourites-container {
+    background-image: url('https://vignette.wikia.nocookie.net/pottermore/images/b/b6/Divination.png/revision/latest?cb=20121221000858');
+    height: 100vh;
+    background-size: cover;
+}
+
+.back-btn-fav {
+   background: linear-gradient( to left, #d6a73e 22%,#d2a559 25%, #d4bc83 40%, #e3ba62 31%,#d8af32 45%,#d09532 80%) left bottom transparent no-repeat;
+   border: none;
+   font-size: 27px;
+   padding: 4px;
+   border-radius: 5px;
+   cursor: pointer;
+   position: relative;
+   top: 5px;
+   left: 20px;
+}
+
+.back-btn-fav:hover {
+  animation: wiggle 2s linear infinite;
+}
+
+.favourites {
+  text-align: center;
+  font-size: 4em;
+}
+
+.fav-spells {
+  display: flex;
+  overflow-x: scroll;
+  margin: 50px 20px;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+      }
+      15% {
+        transform: rotateZ(-15deg);
+      }
+      20% {
+        transform: rotateZ(10deg);
+      }
+      25% {
+        transform: rotateZ(-10deg);
+      }
+      30% {
+        transform: rotateZ(6deg);
+      }
+      35% {
+        transform: rotateZ(-4deg);
+      }
+      40%, 100% {
+        transform: rotateZ(0);
+      } 
+}

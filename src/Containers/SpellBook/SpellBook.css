@@ -10,7 +10,7 @@
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   height: 12em;
+   height: 15em;
 }
 
 .spell-info > h3 {
@@ -20,7 +20,6 @@
 }
 
 .spell-info > h4 {
-  margin-top: -2em;
   font-size: 20px;
 }
 
@@ -30,7 +29,7 @@
   
 .favourite-wand {
    height: 8em;
-   margin-left: 30em;
+   margin-left: 17em;
    transform: rotate(13deg);
    transition: linear 2s ease-in-out;
    cursor: grab;
@@ -48,7 +47,7 @@
 
 .chosen-wand {
   height: 8em;
-  margin-left: 30em;
+  margin-left: 17em;
   transform: rotate(110deg);
   transition: linear 2s ease-in-out;
   cursor: grab;
