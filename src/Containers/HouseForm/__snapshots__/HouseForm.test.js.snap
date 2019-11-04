@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HouseForm Form should match snapshot with all information passing through 1`] = `
+<section
+  className="form-section"
+>
+  <form
+    className="house-form"
+  >
+    <div
+      className="banner"
+    >
+      <input
+        className="wizard-name"
+        name="name"
+        onChange={[Function]}
+        placeholder="Name Here"
+        type="text"
+        value=""
+      />
+      <img
+        alt="banner name"
+        className="name-banner"
+        src="https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png"
+      />
+    </div>
+    <Link
+      onClick={[Function]}
+      to="/spells"
+    >
+      <div
+        className="sorting-container"
+      >
+        <img
+          alt="sorting hat"
+          className="sorting-button"
+          src="https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337"
+        />
+        <h3
+          className="submit-text"
+        >
+          Enter
+        </h3>
+      </div>
+    </Link>
+  </form>
+</section>
+`;
