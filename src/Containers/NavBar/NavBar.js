@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 export const NavBar = ({userHouse, nameOfWizard}) => {
     return ( 
         <nav>
-            <h2>{nameOfWizard}</h2>
+            <h2>{nameOfWizard} Potter </h2>
             <Link to='/'>
               {userHouse === 'Gryffindor' && <img className='mascot-img' src='https://vignette.wikia.nocookie.net/thedailyquibbler/images/0/00/Gryffindor.gif/revision/latest/scale-to-width-down/240?cb=20140719233928' alt='Gryffindor mascot'/> }
               {userHouse === 'HufflePuff' && <img className='mascot-img' src='http://www.colleenmarielynch.com/Hufflepuff/crest2.gif' alt='Hufflepuff mascot'/>}
