@@ -41,6 +41,16 @@ describe('SpellBook', () => {
          it('should match snapshot with all information passing in correctly', () => {
              expect(wrapper).toMatchSnapshot();
          })
+
+         it.skip('should call toggleFavourite when img is clicked', () => {
+             const toggleFavouriteMock = jest.fn();
+            
+             wrapper.find('.favourite-wand').simulate('click');
+
+             expect(toggleFavouriteMock).toHaveBeenCalled();
+         })
+
+         // add fix click test and add update state tests
     })
 
     describe('mapStateToProps', () => {

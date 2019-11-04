@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { SpellsContainer, mapStateToProps } from './SpellsContainer';
 
 describe('SpellsContainer', () => {
-
+ 
     describe('Spells', () => {
         let wrapper;
         let mockSpells = [
@@ -26,31 +26,27 @@ describe('SpellsContainer', () => {
 
 
     describe('mapStateToProps', () => {
-        it.skip('should return an array with the spells state', () => {
-            const mockState = {
-                foundSpell: [
-                    { _id: '5b74f38b3228320021ab628d',
-                    spell: 'Lumos Solem',
-                    type: 'Spell',
-                    effect: 'creates a strong beam of light from the wand',
-                    __v: 0 }
-                   ],
-                  filter: 'SEARCHED_SPELL'
-              };
-
-              const expected = {
-                foundSpell: [
-                    { _id: '5b74f38b3228320021ab628d',
-                    spell: 'Lumos Solem',
-                    type: 'Spell',
-                    effect: 'creates a strong beam of light from the wand',
-                    __v: 0 }
-                  ]
-              };
-
-            const mappedProps = mapStateToProps(mockState);
-            expect(mappedProps).toEqual(expected);
-
+        it('should return an array with the spells state', () => {
+          const mockState = {
+            "selectedSpell": [
+               { _id: '5b74f3653228320021ab628b',
+               spell: 'Lumos',
+               type: 'Spell',
+               effect: 'creates light at wand tip',
+             __v: 0 }
+            ],
+         }
+         const expected = {
+             "selectedSpell": [
+                 { _id: '5b74f3653228320021ab628b',
+                spell: 'Lumos',
+                type: 'Spell',
+                effect: 'creates light at wand tip',
+                __v: 0 }
+             ],
+         }
+         const mappedProps = mapStateToProps(mockState);
+         expect(mappedProps).toEqual(expected);
         })
     })
 })
