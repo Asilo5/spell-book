@@ -66,7 +66,7 @@
 
       const result = actions.hasSpells(spells);
       expect(result).toEqual(expectedAction);
-    })
+    });
 
     it('should have a type of SEARCHED_SPELL', () => {
       const spells = [
@@ -90,7 +90,7 @@
 
       const result = actions.searchedSpell(spells);
       expect(result).toEqual(expectedAction);
-    })
+    });
 
     it('should have type of ADD_FAVOURITE', () => {
       const spellId = '13242423';
@@ -100,6 +100,17 @@
       }
 
       const result = actions.addFavourite(spellId);
+      expect(result).toEqual(expectedAction);
+    });
+
+    it('should have a type of DELETE_FAVOURITE', () => {
+      const spellId = '13242423';
+      const expectedAction = {
+        type: 'DELETE_FAVOURITE',
+        id: '13242423'
+      }
+
+      const result = actions.deleteFavourite(spellId);
       expect(result).toEqual(expectedAction);
     })
  })
