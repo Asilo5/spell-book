@@ -6,16 +6,17 @@ import { bindActionCreators } from 'redux';
 
 class SpellBook extends Component {
 
-  toggleFavourtie = (id) => {
+  toggleFavourtie = () => {
+    const { _id } = this.props;
    // if id is already in the favourites add into addFavourites
    // else deleteFavourites 
    const { addFavourite, deleteFavourite, favouriteSpells } = this.props;
-   
+   console.log(addFavourite);
   //  let bob = favouriteSpells.find((spell) => spell.id === id);
   //  console.log(bob);
-  //  favouriteSpells.includes(id) ? addFavourite(id) : deleteFavourite(id);
+   favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
 
-   console.log(favouriteSpells);
+  
 
   } 
 
@@ -23,11 +24,12 @@ class SpellBook extends Component {
 
 
   render() {
-    const {id, spell, type, effect, isFavourite} = this.props;
+    const {id, spell, type, effect, isFavourite, favouriteSpells} = this.props;
+    console.log(favouriteSpells);
     return (
-        <section className='spells' id={id}>
+        <section className='spells' >
             <div className='spell-container'>
-              <img onClick={this.toggleFavourtie(id)} className='favourite-wand' src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
+              <img onClick={() => this.toggleFavourtie()} className='favourite-wand' src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
                 <h3>{spell}</h3>
                 <h4>{type}</h4>
@@ -50,8 +52,8 @@ export const mapStateToProps = ({userHouse, nameOfWizard, selectedSpell, spellBo
 
 export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({ 
-    addFavourite: id => dispatch( addFavourite(id) ), 
-    deleteFavourite: id => dispatch( deleteFavourite(id) ) 
+    addFavourite,
+    deleteFavourite
   }, dispatch)
 )
 

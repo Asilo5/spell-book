@@ -3,7 +3,7 @@ export const favouriteSpells = ( state = [], action ) => {
         case 'ADD_FAVOURITE':
           return [...state, action.id];
         case 'DELETE_FAVOURITE':
-          return state.filter((spell) => spell.id !== action.id);
+          return state.filter((id) => id !== action.id);
         default:
           return state;
     }  
