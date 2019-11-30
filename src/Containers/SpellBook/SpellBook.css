@@ -29,7 +29,7 @@
   
 .favourite-wand {
    height: 8em;
-   margin-left: 17em;
+   margin-left: 21em;
    transform: rotate(13deg);
    transition: linear 2s ease-in-out;
    cursor: grab;
@@ -42,12 +42,12 @@
 .paper-img {
   display: block;
   margin: auto;
-  margin-top: -20em;
+  margin-top: -24em;
 }
 
 .chosen-wand {
   height: 8em;
-  margin-left: 17em;
+  margin-left: 21em;
   transform: rotate(110deg);
   transition: linear 2s ease-in-out;
   cursor: grab;
