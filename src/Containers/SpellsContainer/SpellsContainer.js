@@ -3,24 +3,14 @@ import  NavBar from '../NavBar/NavBar';
 import SpellBook from '../SpellBook/SpellBook';
 import SpellsForm from '../SpellsForm/SpellsForm';
 import SpellsFilter from '../SpellsFilter/SpellsFilter';
+
+import { bindActionCreators } from 'redux';
+import { searchedSpell } from '../../actions';
 import './SpellsContainer.css';
 import { connect } from 'react-redux';
 
 
 export class SpellsContainer extends Component {
-  
-  filterSpells = (spell) => {
-
-    const { searchedSpell, spellBook } = this.props;
-     
-    let chosenOne = spellBook.find((spell) => {
-      let lowerCaseSpells = spell.spell.toLowerCase();
-      return lowerCaseSpells.includes(spell.toLowerCase());
-    });
-
-   searchedSpell([chosenOne]);
-
-  }
 
   render () {
     const { selectedSpell } = this.props;
@@ -44,5 +34,11 @@ export const mapStateToProps = ({ selectedSpell, spellBook }) => ({
     selectedSpell,
     spellBook
 })
+
+export const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    searchedSpell: spell => dispatch( searchedSpell(spell) )
+  }, dispatch)
+)
 
 export default connect(mapStateToProps)(SpellsContainer);
