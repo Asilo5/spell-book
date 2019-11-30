@@ -14,7 +14,7 @@ export const SpellsContainer  = ({ selectedSpell }) => {
 
     const completeSpells = selectedSpell.map((spell) => {
             return <SpellBook key={spell.id} {...spell}/>
-        })
+        }) 
 
     return (
       <section className='spells-container'>

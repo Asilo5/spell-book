@@ -8,7 +8,7 @@ class SpellsForm extends Component {
   constructor() {
     super();
     this.state = {
-      chosenSpell: ''
+      chosenSpell: '' 
     }
   }
 

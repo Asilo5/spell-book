@@ -3,6 +3,7 @@ import HouseForm  from '../../Containers/HouseForm/HouseForm';
 import  SpellsContainer  from '../../Containers/SpellsContainer/SpellsContainer';
 import FavouritesContainer from '../../Containers/FavouritesContainer/FavouritesContainer';
 import { Route } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,12 @@ const App = () => {
       </section>
     );
 }
+
+App.propTypes = {
+  HouseForm: PropTypes.element,
+  SpellsContainer: PropTypes.element,
+  FavouritesContainer: PropTypes.element
+}; 
 
 export default App;
 

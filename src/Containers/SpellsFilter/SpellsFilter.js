@@ -12,7 +12,7 @@ class SpellsFilter extends Component {
       searchedSpell(clickedType);
     }
 
-    render() {
+    render() { 
         return (
             <section className='type-spell'>
                 <button onClick={() => this.filterSpells('Charm')}>Charm</button>

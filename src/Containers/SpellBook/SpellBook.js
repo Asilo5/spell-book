@@ -22,7 +22,7 @@ export class SpellBook extends Component {
     const { chosenFavourite } = this.state;
     const { spell, type, effect } = this.props;
     return (
-        <section className='spells' >
+        <section className='spells' > 
             <div className='spell-container'>
               <img onClick={() => this.toggleFavourite()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>

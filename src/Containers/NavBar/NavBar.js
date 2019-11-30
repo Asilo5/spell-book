@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './NavBar.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'; 
+import { PropTypes } from 'prop-types';
 
 export const NavBar = ({userHouse, nameOfWizard}) => {
     return ( 
@@ -24,5 +25,10 @@ export const mapStateToProps = ({userHouse, nameOfWizard}) => ({
    userHouse,
    nameOfWizard
 })
+
+NavBar.propTypes = {
+   userHouse: PropTypes.string,
+   nameOfWizard: PropTypes.string
+};
 
 export default connect(mapStateToProps)(NavBar);
