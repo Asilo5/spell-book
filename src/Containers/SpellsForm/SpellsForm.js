@@ -21,12 +21,12 @@ class SpellsForm extends Component {
     const { chosenSpell } = this.state;
     const { spellBook, searchedSpell } = this.props;
 
-    let chosenOne = spellBook.find((spell) => {
+    let chosenOne = spellBook.filter((spell) => {
         let lowerCaseSpells = spell.spell.toLowerCase();
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
 
-     searchedSpell([chosenOne]);
+     searchedSpell(chosenOne);
 
     this.resetInputs();
   }
