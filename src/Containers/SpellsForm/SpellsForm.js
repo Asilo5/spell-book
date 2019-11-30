@@ -21,12 +21,12 @@ class SpellsForm extends Component {
     const { chosenSpell } = this.state;
     const { spellBook, searchedSpell } = this.props;
 
-    let chosenOne = spellBook.find((spell) => {
+    let chosenOne = spellBook.filter((spell) => {
         let lowerCaseSpells = spell.spell.toLowerCase();
         return lowerCaseSpells.includes(chosenSpell.toLowerCase());
       });
 
-     searchedSpell([chosenOne]);
+     searchedSpell(chosenOne);
 
     this.resetInputs();
   }
@@ -45,7 +45,7 @@ class SpellsForm extends Component {
       const { selectedSpell } = this.props;
     return (
         <form className='search-form'>
-           {selectedSpell.length === 1 && <button className='all-spells-btn' onClick={this.backToAllSpells}>All Spells</button>}
+           {selectedSpell.length <= 93 && <button className='all-spells-btn' onClick={this.backToAllSpells}>All Spells</button>}
             <input className='search-spells'
                     placeholder='Search for Spell'
                     type='text'
