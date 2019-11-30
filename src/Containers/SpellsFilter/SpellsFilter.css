@@ -1,0 +1,18 @@
+.type-spell {
+    display: flex;
+    justify-content: center;
+}
+
+.type-spell > button {
+    background: linear-gradient( to left, #d6a73e 22%,#d2a559 25%, #d4bc83 40%, #e3ba62 31%,#d8af32 45%,#d09532 80%) left bottom transparent no-repeat;
+    border: none;
+    font-size: 27px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.type-spell > button:hover {
+    font-weight: bold;
+}

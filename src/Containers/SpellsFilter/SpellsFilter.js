@@ -14,7 +14,7 @@ class SpellsFilter extends Component {
 
     render() {
         return (
-            <section>
+            <section className='type-spell'>
                 <button onClick={() => this.filterSpells('Charm')}>Charm</button>
                 <button onClick={() => this.filterSpells('Enchantment')}>Enchantment</button>
                 <button onClick={() => this.filterSpells('Hex')}>Hex</button>
