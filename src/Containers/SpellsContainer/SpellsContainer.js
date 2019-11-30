@@ -3,6 +3,7 @@ import  NavBar from '../NavBar/NavBar';
 import SpellBook from '../SpellBook/SpellBook';
 import SpellsForm from '../SpellsForm/SpellsForm';
 import SpellsFilter from '../SpellsFilter/SpellsFilter';
+import { PropTypes } from 'prop-types';
 
 import { bindActionCreators } from 'redux';
 import { searchedSpell } from '../../actions';
@@ -38,5 +39,11 @@ export const mapDispatchToProps = (dispatch) => (
     searchedSpell: spell => dispatch( searchedSpell(spell) )
   }, dispatch)
 )
+
+SpellsContainer.propTypes = {
+    selectedSpell: PropTypes.array,
+    spellBook: PropTypes.array,
+    searchedSpell: PropTypes.func
+};
 
 export default connect(mapStateToProps)(SpellsContainer);

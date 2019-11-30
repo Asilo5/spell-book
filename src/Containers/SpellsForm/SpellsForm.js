@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { hasSpells, searchedSpell } from '../../actions';
+import { PropTypes } from 'prop-types';
 import './SpellsForm.css';
 
 class SpellsForm extends Component {
@@ -69,5 +70,12 @@ export const mapDispatchToProps = (dispatch) => (
       searchedSpell: spell => dispatch( searchedSpell(spell) )
     }, dispatch)
  )
+
+ SpellsForm.propTypes = {
+  spellBook: PropTypes.array,
+  selectedSpell: PropTypes.array,
+  searchedSpell: PropTypes.func,
+  hasSpells: PropTypes.func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpellsForm);
