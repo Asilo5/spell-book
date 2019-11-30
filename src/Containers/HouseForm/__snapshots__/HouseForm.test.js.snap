@@ -24,26 +24,20 @@ exports[`HouseForm Form should match snapshot with all information passing throu
         src="https://www.pinclipart.com/picdir/big/10-101144_vintage-banner-vector-png-theveliger-clipart-vintage-banner.png"
       />
     </div>
-    <Link
-      disabled={true}
-      onClick={[Function]}
-      to="/spells"
+    <div
+      className="sorting-hat"
     >
-      <div
-        className="sorting-container"
+      <img
+        alt="sorting hat"
+        className="sorting-button-invalid"
+        src="https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337"
+      />
+      <h3
+        className="submit-hat"
       >
-        <img
-          alt="sorting hat"
-          className="sorting-button"
-          src="https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337"
-        />
-        <h3
-          className="submit-text"
-        >
-          Enter
-        </h3>
-      </div>
-    </Link>
+        Enter Name
+      </h3>
+    </div>
   </form>
 </section>
 `;
