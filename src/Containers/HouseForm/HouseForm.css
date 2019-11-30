@@ -42,12 +42,17 @@
    animation: float 5s linear infinite;
 }
 
-.sorting-button {
+.sorting-button,
+.sorting-button-invalid {
     width: 18em;
     display: block;
     margin: auto;
     cursor: pointer;
 }
+
+.sorting-button-invalid {
+  cursor: inherit;
+} 
 
 .sorting-container {
   transition: transform .8s ease-in-out;
@@ -61,7 +66,8 @@
   height: 10em;
 }
 
-.submit-text {
+.submit-text, 
+.submit-hat {
   position: relative;
   text-align: center;
   bottom: 131px;
@@ -70,6 +76,11 @@
   font-size: 37px;
   text-shadow: 2px 2px black;
   font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.submit-hat {
+  font-size: 37px;
+  color: #f11818;
 }
 
 a {
