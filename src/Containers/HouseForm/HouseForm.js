@@ -73,9 +73,9 @@ render() {
                       </div>
                    </Link>
                    ) : (
-                    <div className='sorting-container'>
-                      <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
-                      <h3 className='submit-text'>Enter</h3>
+                    <div className='sorting-hat'>
+                      <img className='sorting-button-invalid' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
+                      <h3 className='submit-hat'>Enter Name</h3>
                     </div>
                    )}
               </form>
