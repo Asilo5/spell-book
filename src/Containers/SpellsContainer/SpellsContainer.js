@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import  NavBar from '../NavBar/NavBar';
 import SpellBook from '../SpellBook/SpellBook';
 import SpellsForm from '../SpellsForm/SpellsForm';
@@ -10,13 +10,12 @@ import './SpellsContainer.css';
 import { connect } from 'react-redux';
 
 
-export class SpellsContainer extends Component {
+export const SpellsContainer  = ({ selectedSpell }) => {
 
-  render () {
-    const { selectedSpell } = this.props;
     const completeSpells = selectedSpell.map((spell) => {
             return <SpellBook key={spell.id} {...spell}/>
         })
+
     return (
       <section className='spells-container'>
            <NavBar />
@@ -27,7 +26,6 @@ export class SpellsContainer extends Component {
             </div>
         </section> 
     )
-  }
 }
 
 export const mapStateToProps = ({ selectedSpell, spellBook }) => ({
