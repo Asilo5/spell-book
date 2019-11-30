@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import SpellBook from '../SpellBook/SpellBook';
 import { Link } from 'react-router-dom';
-import './FavouritesContainer.css';
+import { PropTypes } from 'prop-types';
+import './FavouritesContainer.css'; 
 
 export const FavouritesContainer = ({favouriteSpells, spellBook}) => {
    const findSpell = favouriteSpells.map((id) => {
@@ -30,5 +31,10 @@ export const mapStateToProps = ({favouriteSpells, spellBook}) => ({
     favouriteSpells,
     spellBook
 })
+
+FavouritesContainer.propTypes = {
+  favouriteSpells: PropTypes.array, 
+  spellBook: PropTypes.func
+}; 
 
 export default connect(mapStateToProps)(FavouritesContainer);

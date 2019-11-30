@@ -13,6 +13,7 @@
     margin: 10px;
 }
 
-.type-spell > button:hover {
+.type-spell > button:hover,
+.type-spell > button:focus {
     font-weight: bold;
 }

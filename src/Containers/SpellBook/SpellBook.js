@@ -3,6 +3,7 @@ import './SpellBook.css';
 import { connect } from 'react-redux';
 import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
+import { PropTypes } from 'prop-types';
 
 export class SpellBook extends Component {
   constructor() {
@@ -22,7 +23,7 @@ export class SpellBook extends Component {
     const { chosenFavourite } = this.state;
     const { spell, type, effect } = this.props;
     return (
-        <section className='spells' >
+        <section className='spells' > 
             <div className='spell-container'>
               <img onClick={() => this.toggleFavourite()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
@@ -51,5 +52,16 @@ export const mapDispatchToProps = (dispatch) => (
     deleteFavourite
   }, dispatch)
 )
+
+SpellBook.propTypes = {
+  userHouse: PropTypes.string,
+  nameOfWizard: PropTypes.string,
+  selectedSpell: PropTypes.array,
+  spellBook: PropTypes.array,
+  favouriteSpells: PropTypes.array,
+  addFavourite: PropTypes.func,
+  deleteFavourite: PropTypes.func
+
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpellBook);

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { givenHouse, isLoading, wizardsName, hasSpells, searchedSpell } from '../../actions';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import LoadingPage from '../LoadingPage/LoadingPage';
+import { PropTypes } from 'prop-types';
 
 export class HouseForm extends Component {
     constructor() {
@@ -71,7 +71,7 @@ render() {
                         <img className='sorting-button' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
                         <h3 className='submit-text'>Enter</h3>
                       </div>
-                   </Link>
+                   </Link> 
                    ) : (
                     <div className='sorting-hat'>
                       <img className='sorting-button-invalid' src='https://cdn.shopify.com/s/files/1/0221/1146/products/Sorting_Hat_pin_badge_scaled_grande.png?v=1551715337' alt='sorting hat' />
@@ -93,6 +93,14 @@ export const mapDispatchToProps = (dispatch) => (
      searchedSpell: spell => dispatch( searchedSpell(spell) )
    }, dispatch)
 )
+
+HouseForm.propTypes = {
+  givenHouse: PropTypes.string,
+  isLoading: PropTypes.bool,
+  wizardsName: PropTypes.string,
+  hasSpells: PropTypes.string,
+  searchedSpell: PropTypes.func
+}; 
 
 
 export default connect(null, mapDispatchToProps)(HouseForm);
