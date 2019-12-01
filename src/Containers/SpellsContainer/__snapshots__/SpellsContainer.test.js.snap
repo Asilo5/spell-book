@@ -6,6 +6,7 @@ exports[`SpellsContainer Spells should match snapshot with all data being passed
 >
   <Connect(NavBar) />
   <Connect(SpellsForm) />
+  <Connect(SpellsFilter) />
   <div
     className="completed-spells"
   >
