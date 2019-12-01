@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/spell-book/static/css/main.be83ba86.chunk.css",
+    "main.js": "/spell-book/static/js/main.64ad46cb.chunk.js",
+    "main.js.map": "/spell-book/static/js/main.64ad46cb.chunk.js.map",
+    "runtime-main.js": "/spell-book/static/js/runtime-main.e7b041e3.js",
+    "runtime-main.js.map": "/spell-book/static/js/runtime-main.e7b041e3.js.map",
+    "static/js/2.1c8d6b52.chunk.js": "/spell-book/static/js/2.1c8d6b52.chunk.js",
+    "static/js/2.1c8d6b52.chunk.js.map": "/spell-book/static/js/2.1c8d6b52.chunk.js.map",
+    "index.html": "/spell-book/index.html",
+    "precache-manifest.d4b677873bc1668f48a909bb4a71dfbb.js": "/spell-book/precache-manifest.d4b677873bc1668f48a909bb4a71dfbb.js",
+    "service-worker.js": "/spell-book/service-worker.js",
+    "static/css/main.be83ba86.chunk.css.map": "/spell-book/static/css/main.be83ba86.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7b041e3.js",
+    "static/js/2.1c8d6b52.chunk.js",
+    "static/css/main.be83ba86.chunk.css",
+    "static/js/main.64ad46cb.chunk.js"
+  ]
+}
