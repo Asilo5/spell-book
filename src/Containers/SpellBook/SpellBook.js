@@ -14,18 +14,19 @@ export class SpellBook extends Component {
   }
 
   toggleFavourite = () => {
-   const { addFavourite, deleteFavourite, favouriteSpells, _id, isFavourite} = this.props;
+   const { addFavourite, deleteFavourite, favouriteSpells, _id } = this.props;
    this.setState({ chosenFavourite : !this.state.chosenFavourite })
    favouriteSpells.includes(_id) ? deleteFavourite(_id) : addFavourite(_id);
   } 
 
   render() {
-    const { chosenFavourite } = this.state;
-    const { spell, type, effect } = this.props;
+    // const { chosenFavourite } = this.state;
+    const { spell, type, effect, favouriteSpells, _id} = this.props;
+    const toggleWand = favouriteSpells.includes(_id) ? 'chosen-wand' : 'favourite-wand';
     return (
         <section className='spells' > 
             <div className='spell-container'>
-              <img onClick={() => this.toggleFavourite()} className={chosenFavourite ? 'favourite-wand' : 'chosen-wand'} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
+              <img onClick={() => this.toggleFavourite()} className={toggleWand} src='https://gamepress.gg/wizardsunite/sites/wizardsunite/files/2019-04/Luna%20Lovegood-foundable_0.png' alt='luna lovegood wand to favourite spell card' />
               <div className='spell-info'>
                 <h3>{spell}</h3>
                 <h4>{type}</h4>
