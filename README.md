@@ -25,6 +25,6 @@ Spell Book was built using:
   
 ## Images of Spell Book
 
-![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-11-04%20at%2014.43.58.png)
-![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-11-04%20at%2014.44.21.png)
-![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-11-04%20at%2014.45.00.png)
+![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-12-01%20at%2009.54.59.png)
+![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-12-01%20at%2009.56.31.png)
+![image of Spell Book](https://github.com/Asilo5/spell-book/blob/master/Screenshot%202019-12-01%20at%2009.56.49.png)
