@@ -2,7 +2,7 @@
   text-align: center;
   position: relative;
   top: 2em;
-  width: 44%;
+  width: 87%;
   margin: auto;
 }
 
@@ -40,9 +40,10 @@
 }
   
 .paper-img {
-  display: block;
+  display: block; 
   margin: auto;
   margin-top: -24em;
+  height: 30em;
 }
 
 .chosen-wand {
