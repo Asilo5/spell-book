@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addFavourite, deleteFavourite } from '../../actions';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
+import imageFile from '../../static/scroll.png';
 
 export class SpellBook extends Component {
   constructor() {
@@ -20,7 +21,6 @@ export class SpellBook extends Component {
   } 
 
   render() {
-    // const { chosenFavourite } = this.state;
     const { spell, type, effect, favouriteSpells, _id} = this.props;
     const toggleWand = favouriteSpells.includes(_id) ? 'chosen-wand' : 'favourite-wand';
     return (
@@ -33,7 +33,7 @@ export class SpellBook extends Component {
                 <p>This {type} {effect}</p>
               </div>
             </div>
-            <img className='paper-img' src='https://www.artsclip.com/background/XZHaFAgbeP-vintage-paper-scroll-for-short-news-slides.png' alt='background paper for spells' />
+            <img className='paper-img' src={imageFile} alt='background paper for spells' />
         </section>
     )
   }
