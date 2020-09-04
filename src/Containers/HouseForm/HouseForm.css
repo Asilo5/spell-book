@@ -29,7 +29,7 @@
     background: transparent;
     position: absolute;
     top: 1em;
-    left: 3.5em;
+    left: 0.7em;
     text-align: center;
     font-family: 'Henny Penny', cursive;
 }
@@ -64,6 +64,7 @@
 
 .name-banner {
   height: 10em;
+  margin-left: -5em;
 }
 
 .submit-text, 
